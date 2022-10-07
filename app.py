@@ -96,4 +96,4 @@ def search():
     return render_template('country.html', country=name, alpha3=alpha3, flag=flag, eng=eng, translit=translit, freqs=freqs)
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', debug=True)
+    app.run(host='0.0.0.0')
