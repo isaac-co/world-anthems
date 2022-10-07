@@ -66,7 +66,7 @@ def random():
     freqs = freq(eng_stop)
     freqs = json.dumps(freqs)
 
-    return render_template('country.html', country=name, alpha3=alpha3, flag=flag, eng=eng, translit=translit, freqs=freqs)
+    return render_template('country.html', country=name, alpha3=alpha3, flag=flag, eng=eng, translit=translit, freqs=freqs, countries=countries_list)
 
 @app.route('/country/<name>')
 def country(name):
@@ -77,7 +77,7 @@ def country(name):
     freqs = freq(eng_stop)
     freqs = json.dumps(freqs)
 
-    return render_template('country.html', country=name, alpha3=alpha3, flag=flag, eng=eng, translit=translit, freqs=freqs)
+    return render_template('country.html', country=name, alpha3=alpha3, flag=flag, eng=eng, translit=translit, freqs=freqs, countries=countries_list)
 
 @app.route('/search', methods=["GET","POST"])
 def search():
@@ -93,7 +93,7 @@ def search():
     freqs = freq(eng_stop)
     freqs = json.dumps(freqs)
 
-    return render_template('country.html', country=name, alpha3=alpha3, flag=flag, eng=eng, translit=translit, freqs=freqs)
+    return render_template('country.html', country=name, alpha3=alpha3, flag=flag, eng=eng, translit=translit, freqs=freqs, countries=countries_list)
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
